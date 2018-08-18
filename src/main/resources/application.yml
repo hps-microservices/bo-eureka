@@ -1,0 +1,27 @@
+bo-eureka:
+  display-name: bo-eureka
+
+info:
+  name: ${bo-eureka.display-name}
+  version: @project.version@
+
+server:
+  port: 7800
+
+# ----------------------------------------
+# ACTUATOR PROPERTIES
+# ----------------------------------------
+#endpoints:
+#  enabled: true
+#  actuator:
+#    enabled: true
+#  configprops:
+#    keys-to-sanitize: "password,secret,key,token,.*credentials.*,vcap_services, .*mongo.*, .*datasource.*"
+#  env:
+#    keys-to-sanitize: "password,secret,key,token,.*credentials.*,vcap_services, .*mongo.*, .*datasource.*"
+
+# https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html
+management:
+  security:
+    enabled: false
+
