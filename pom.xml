@@ -8,7 +8,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>bo-eureka</name>
-    <description>Spring Cloud Eureka to Box Office applications.</description>
+    <description>Spring Cloud Eureka to Box Office applications</description>
     <parent>
          <groupId>com.msvvdv</groupId>
          <artifactId>bo-common-parent</artifactId>
@@ -71,11 +71,6 @@
             <name>nexus</name>
             <url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>
         </repository>
-        <repository>
-            <id>nexus</id>
-            <name>nexus</name>
-            <url>http://nexus-ms.herokuapp.com/content/repositories/snapshots</url>
-        </repository>
     </repositories>
     <distributionManagement>
         <repository>
@@ -83,10 +78,5 @@
             <name>nexus</name>
             <url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>
         </repository>
-        <snapshotRepository>
-            <id>nexus</id>
-            <name>nexus</name>
-            <url>http://nexus-ms.herokuapp.com/content/repositories/snapshots</url>
-        </snapshotRepository>
     </distributionManagement>
 </project>
