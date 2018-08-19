@@ -3,7 +3,7 @@ bo-eureka:
 
 info:
   name: ${bo-eureka.display-name}
-  version: @project.version@
+ # version: @project.version@
 
 server:
   port: 7800
