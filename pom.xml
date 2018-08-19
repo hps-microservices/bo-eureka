@@ -63,6 +63,7 @@
                 <configuration>
                     <executable>true</executable>
                 </configuration>
+                <!-- To make the deploy in heroku cloud -->
                 <executions>
                     <execution>
                         <goals>
