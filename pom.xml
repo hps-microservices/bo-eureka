@@ -9,12 +9,21 @@
     <packaging>jar</packaging>
     <name>bo-eureka</name>
     <description>Spring Cloud Eureka to Box Office applications</description>
+    <!-- Use with bo-common project -->
+    <!--<parent>-->
+        <!--<groupId>com.msvvdv</groupId>-->
+        <!--<artifactId>bo-common-parent</artifactId>-->
+        <!--<version>1.0</version>-->
+    <!--</parent>-->
     <parent>
-         <groupId>com.msvvdv</groupId>
-         <artifactId>bo-common-parent</artifactId>
-         <version>1.0</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.4.RELEASE</version>
+        <relativePath/><!-- lookup parent from repository -->
     </parent>
     <properties>
+        <spring-boot.version>2.0.4.RELEASE</spring-boot.version>
+        <spring-cloud.version>Finchley.SR1</spring-cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
@@ -47,6 +56,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <!--<version>2.0.4.RELEASE</version>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -54,6 +64,17 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <build>
         <plugins>
             <plugin>
@@ -74,18 +95,19 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>nexus</name>
-            <url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>
-        </repository>
-    </repositories>
-    <distributionManagement>
-        <repository>
-            <id>nexus</id>
-            <name>nexus</name>
-            <url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>
-        </repository>
-    </distributionManagement>
+    <!--  Use with bo-common project-->
+    <!--<repositories>-->
+        <!--<repository>-->
+            <!--<id>nexus</id>-->
+            <!--<name>nexus</name>-->
+            <!--<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>-->
+        <!--</repository>-->
+    <!--</repositories>-->
+    <!--<distributionManagement>-->
+        <!--<repository>-->
+            <!--<id>nexus</id>-->
+            <!--<name>nexus</name>-->
+            <!--<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>-->
+        <!--</repository>-->
+    <!--</distributionManagement>-->
 </project>
