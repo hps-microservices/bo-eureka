@@ -11,9 +11,9 @@
     <description>Spring Cloud Eureka to Box Office applications</description>
     <!-- Use with bo-common project -->
     <!--<parent>-->
-        <!--<groupId>com.msvvdv</groupId>-->
-        <!--<artifactId>bo-common-parent</artifactId>-->
-        <!--<version>1.0</version>-->
+    <!--<groupId>com.msvvdv</groupId>-->
+    <!--<artifactId>bo-common-parent</artifactId>-->
+    <!--<version>1.0</version>-->
     <!--</parent>-->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -63,6 +63,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -97,17 +101,17 @@
     </build>
     <!--  Use with bo-common project-->
     <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>nexus</id>-->
-            <!--<name>nexus</name>-->
-            <!--<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>-->
-        <!--</repository>-->
+    <!--<repository>-->
+    <!--<id>nexus</id>-->
+    <!--<name>nexus</name>-->
+    <!--<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>-->
+    <!--</repository>-->
     <!--</repositories>-->
     <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>nexus</id>-->
-            <!--<name>nexus</name>-->
-            <!--<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>-->
-        <!--</repository>-->
+    <!--<repository>-->
+    <!--<id>nexus</id>-->
+    <!--<name>nexus</name>-->
+    <!--<url>http://nexus-ms.herokuapp.com/content/repositories/releases</url>-->
+    <!--</repository>-->
     <!--</distributionManagement>-->
 </project>

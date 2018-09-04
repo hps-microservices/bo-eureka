@@ -8,18 +8,18 @@
 spring:
   application:
     name: bo-eureka
-  cloud:
-    config:
-      #If want remote config, change for true value.
-      enabled: false
-      #The label represents a branch from git repository.
-      label: local
-      discovery:
-        enabled: false
-        serviceId: bo-configuration
 
 eureka:
   client:
     registerWithEureka: false
+  #  The eureka.client
+  # .fetchRegistry attribute is set to false so that when the Eureka service starts, it
+  # doesn’t try to cache its registry information locally.
     fetch-registry: false
+    server:
+  #  When you’re testing your service locally you should uncom-
+  #  ment this line because Eureka won’t immediately advertise any services that register
+  #  with it. It will wait five minutes by default to give all of the services a chance to register
+  #  with it before advertising them.
+    waitTimeInMsWhenSyncEmpty: 5
 
